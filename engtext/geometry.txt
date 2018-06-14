@@ -1,0 +1,55 @@
+\documentclass[oneside, final, 14pt]{extreport}
+%\usepackage[utf8x]{inputenc}
+%\usepackage[russianb]{babel}
+\usepackage{vmargin}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\setpapersize{A4}
+\setmarginsrb{2cm}{1.5cm}{1cm}{1.5cm}{0pt}{0mm}{0pt}{13mm}
+\usepackage{indentfirst}
+\sloppy
+\begin{document}
+
+\chapter*{\large Geometry}
+
+The geometry for the simulation of the experiment of interacting elastic \emph{nitrogen 15} and \emph{Bor 11}, was built with the help of the package \emph{rootcern}.
+In order to make it easier to debug the operation of control macros, the geometry for each device was built independently of other devices, i.e. in separate macros. Next in the macro Manager of the simulation, all devices are included in the total \emph{cave} (caves) inside of which make modeling.
+
+The geometry of the simulated experiment contains the following elements: a collimator, a target and a detector.
+The collimator is a hollow cylinder of \emph{aluminum}, and is shown in figure \ref{col:pic}.
+The target in its turn is a thin round plate from \emph{boron 11} - figure \ref{tar:pic}.
+The detector is shown in figure \ref{det:pic}. It consists of the following parts. A truncated hollow pyramid of \emph{aluminum} flooded razresheniem gas \emph{ISO-butane}. Cylindrical cover of \emph{of aluminium} with continuous cubic otversiem. The hole in the lid is covered with a thin film of \emph{Mylar}. Cylinder of \emph{of silicon}, is dense adjacent to the base pechnoy of a hollow pyramid. Registered points in the detector was installed: discharged gas (\emph{ISO-butane}) and semiconductor.
+
+The figure \ref{exp:pic} shows the location of all simulated experimental facilities. The target is located at zero (the origin of the laboratory coordinate system) perpendicular to the beam axis.
+The colimator is located in front of the target, and the detector behind it. The detector in this figure is placed at an angle of \(8\) degrees relative to the axis of the beam.
+
+\begin{figure}
+ \centering
+ \includegraphics[height=0.5\textheight]{colimator}
+ \caption{Colimator}
+ \label{col:pic}
+\end{figure}
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.5\textheight]{target}
+ \caption{Target}
+ \label{tar:pic}
+\end{figure}
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.5\textheight]{detector}
+ \caption{Detector}
+ \label{det:pic}
+\end{figure}
+
+
+\begin{figure}
+ \centering
+ \includegraphics[height=0.5\textheight]{b}
+ \caption{Experimental geometry}
+ \label{exp:pic}
+\end{figure}
+
+\end{document}
