@@ -2,3 +2,4 @@
 
 rm -fv geometry*
 rm -fv about*
+rm -fv paper*

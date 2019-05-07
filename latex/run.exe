@@ -1,8 +1,0 @@
-#!/bin/bash
-
-#rm -fv *.aux *.log 
-#rm -iv *.pdf
-
-pdflatex ../text/about.txt
-
-xpdf about.pdf

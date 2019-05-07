@@ -1,0 +1,27 @@
+Monte Carlo study of the systematic errors in the measurement of 15N
+ions scattering from 10,11B.
+
+A series of experiments on the elastic scattering of 15N ions from
+10,11B has been done at U-200P cyclotron at Heavy Ion Laboratory, Warsaw
+University using the charged particles detection system ICARE. The measured differential distributions are used for obtaining the theoretical interpretation in terms of the Optical Model for purely elastic scattering and Distorted wave Born Approximation for the cluster transfer mechanism.
+
+The reliability of the interpretation depends on the systematic errors
+of the experiment.  In this work, we report on a Monte Carlo study of
+such errors using the ExpertRoot simulation and analysis framework based
+on the FairRoot package.
+
+Influence of such factors as angular, spatial and energy spread of the
+beam, energy loss and multiple scattering in the target and the
+dimension of the detector slit on the angular resolution of the detector
+and the reconstructed differential cross section are investigated. The Monte Carlo model allowed to study the influence of the ion identification
+and detection efficiency and the energy resolution as well. However, in
+the given experiment these factors were not of any importance.
+
+As a result, it has been demonstrated that the reconstructed differential
+cross section is slightly different from the input one.  The main reason
+for this distinction is the beam spot size at the target. Influence of
+the slit length is negligible, hence it can be increased for better
+detection efficiency.
+
+The developed software will be used for planning and analysing similar
+experiments in the future.

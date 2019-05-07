@@ -1,0 +1,20 @@
+Introdaction
+
+There are two different mechanisms for elastic scattering of 15N from 11B.
+First is pure elastic scattering which is described by the optical model very well and dominates at forward angles. Second is alpha cluster transfer mechanism, It is described by DWBA and dominates at backward angles.
+In this work, we modeled the elastic scattering of 15N by 11B using the theoretical calculation of the angular distribution
+based on two models OM+DWBA.  We studied the influence of some physical effects and geometry
+of the experiment on the angular resolution, and how they influence the derived angular dependence of the cross-section.
+We also studied systematic errors and made recommendations for future experiments.
+Simulatins have been done using EXPERTRoot framework.
+
+EXPERTRoot
+
+ExpertRoot is a framework for simulation of detector`s response, event reconstruction and real data analysis in low energy nuclear physics with radioactive beams. ExpertRoot is used for the EXPERT project at SuperFRS@FAIR and for the experiments at  ACCULINNA-2 fragment-separator in JINR. ExpertRoot is a FAIRRoot based framework which means it inherits its approaches and methodology for developing software for entire life cycle of  physical experiment, EXPERTRoot adds the functionality needed for specific experiments and setups and It uses Root framework for data storage and analysis and Geant4 as simulation engine.
+A key feature of ExpertRoot used in this work is the ability to add user defined interaction (reaction or decay)  in Monte-Carlo simulation. This allows one to start the event not with the tracking of products from the target, but with tracking of the primary ion and take into account its energy loss in the target, the quality of the beam, and its scattering in the target volume before reaction. EXPERTRoot has specific Elastic scattering reaction implementation was used for simulation, with user definable:
+distribution of reaction position, cumulative distribution function of reaction angle, angular distribution for the reaction products.
+
+
+
+
+
