@@ -1,4 +1,5 @@
 #!/bin/bash
 #rm -rf *.dvi *.log 
-latex source.tex
-xdvi source.dvi
+pdflatex source.tex
+wait
+evince source.pdf
