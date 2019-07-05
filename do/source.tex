@@ -97,13 +97,9 @@ The experiments have been performed using the charged particles detection system
 \begin{eqnarray}
  \frac{ \frac{d\sigma}{d\Omega}(\theta) }{\sigma_{tot}} = \frac{N}{N_0 d\Omega_{det}},
 \end{eqnarray}
-
 where
-
-\begin{eqnarray}
-  \sigma_{tot} = 2\pi \int\limits_{5^{0}}^{180^{0}} sin(\theta)\frac{d\sigma}{d\Omega}(\theta)d\theta,
- \end{eqnarray}
-and N$_{0}$ is a full projectiles number interacted with the target.
+$\sigma$$_{tot}$ is a total cross section of the interaction
+and N$_{0}$ is a full projectiles number hit the target and registered by Faraday Cup (Fig.1).
 
 Nevertheless, the beam emittance, finite thickness of the target and the size of the detector slit lead to certain systematic deviation of the measured relative cross section w.r.t its true value. In this work, such deviations were investigated using Monte Carlo (MC) simulation within the ExpertRoot (ER) [3].
 
@@ -113,7 +109,7 @@ The obtained results can be used for improving the theoretical interpretation of
 
 \section{The experiment and its Monte Carlo simulation}
 
-The experimental setup (Fig. 1) consists of: a collimator for the 15N beam, ${}^{11}$B target and four identical detectors. Each detector is a combination of a gas ionization chamber and a silicon sensor, it allows identification of ions by the dE vs. E method. The aperture of the detector is defined by a vertical slit 2x4 mm in the aluminum cap. In order to measure angular dependence of the counting rate the detectors were moved with step of $1^0$  from $5^0$ to 4$5^0$ in Lab. Note that the angle of 4$5^0$ in the lab corresponds to $\theta$-angle of 9$0^0$  in Center of mass (CM) reference frame. Both ${}^{15}$N and ${}^{10,11}$B ions can be identified and counted by the detector. CM $\theta$-angle less than 9$0^0$  are accessible when ${}^{15}$N ions are detected while detection of ${}^{10,11}$B ions allow to explore the CM $\theta$-angle bigger than 9$0^0$.
+The experimental setup (Fig. 1) consists of: a collimator for the ${}^{15}$N beam, ${}^{11}$B target and four identical detectors. Each detector is a combination of a gas ionization chamber and a silicon sensor, it allows identification of ions by the dE vs. E method. The aperture of the detector is defined by a vertical slit 2x4 mm in the aluminum cap. In order to measure angular dependence of the counting rate the detectors were moved with step of $1^0$  from $5^0$ to 4$5^0$ in Lab. Angle of $5^0$ in Lab corresponds to the angle about 1$1^{0}$in CM for ${}^{15}$N and about 16$9^0$ for ${}^{11}$B. Angle of 4$5^0$ in Lab corresponds to the angle about 8$6^{0}$in CM for ${}^{15}$N and about 11$0^0$ for ${}^{11}$B. Note that the angle of 4$5^0$ in the lab corresponds to $\theta$-angle of 9$0^0$  in Center of mass (CM) reference frame. Both ${}^{15}$N and ${}^{10,11}$B ions can be identified and counted by the detector. CM $\theta$-angle less than 9$0^0$  are accessible when ${}^{15}$N ions are detected while detection of ${}^{10,11}$B ions allow to explore the CM $\theta$-angle bigger than 9$0^0$.
 
 \begin{figure}[h]
 \center{\includegraphics[width=1\linewidth]{fig_1.eps}}
@@ -164,7 +160,8 @@ In the Fig. 2 the angular resolution vs. Lab $\theta$-angle curves are shown for
 
 In the Fig. 2 one can see that the angular resolution deteriorates by the factor almost 4 when all the discussed non idealities are taken into account. The statistical error of each point does not exceed $\pm$1$\%$. Wave-like behavior is statistically significant, but its cause is not clear. The main factors deteriorate angular resolutions are ${}^{11}$B target thick and X spread of the $\theta$-angle of the ${}^{15}$N ion beam.
 
-The Fig. 2 shows how the detection system distorts the input differential cross section curves. Unlike the real experiment, where normalization is used, in the MC study we have enough data for deriving the absolute cross section. Here the red line corresponds to the input cross-section and the blue and black points correspond to the restored one. There are three main effects. First is that the reconstructed cross section is slightly smaller than the input one. It is because some scattered ions go above and below the detector slit. This effect is not relevant for the experiment where the relative cross section is measured. The second is that the measured dependence becomes less steep at the small angles than the original curve. The third is that the wave-like structure of the original curve becomes less prominent. The last two effects are relevant for the experiment and are due to the non-ideal angular resolution of the entire set up.
+The Fig. 3 shows how the detection system distorts the input differential cross section curves. Here the red line corresponds to the input cross-section and the blue and black points correspond to the restored one. There are three main effects. The first is that the measured dependence becomes less steep at the small angles than the original curve. The second is that the wave-like structure of the original curve becomes less prominent. This effects are relevant for the experiment and are due to the non-ideal angular resolution of the entire set up.
+The third is that the reconstructed cross section is slightly smaller than the input one. It is because some scattered ions go above and below the detector slit. This effect is not relevant for the experiment where the relative cross section is measured. The restored differential cross section for ${}^{15}$N is smaller than the original one by the factor 1,27, and for ${}^{11}$B by the factor 1,19. On the Fig. 3 the restored curves are normalized by this factors.
 
 \section{Conclusion}
 
