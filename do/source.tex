@@ -95,21 +95,24 @@ Elastic scattering of ${}^{15}$N ions from ${}^{10,11}$B at low energy is a prob
 The experiments have been performed using the charged particles detection system ICARE [2]. The detector system has very high detection and identification efficiencies and simple geometry that allows deriving the relative differential cross section from the count rate with a good accuracy using a simple formula:
 
 \begin{eqnarray}
- \frac{ \frac{d\sigma}{d\Omega}(\theta) }{\sigma_{tot}} = \frac{N}{N_0 d\Omega_{det}},
+ \frac{ \frac{d\sigma}{d\Omega}(\theta) }{\sigma_{tot}} \sim \frac{N}{N_0 d\Omega_{det}},
 \end{eqnarray}
 where
 $\sigma$$_{tot}$ is a total cross section of the interaction
-and N$_{0}$ is a full projectiles number hit the target and registered by Faraday Cup (Fig.1).
+and N$_{0}$ is a full projectiles number passed through the target and registered by the Faraday Cup (Fig.1).
 
 Nevertheless, the beam emittance, finite thickness of the target and the size of the detector slit lead to certain systematic deviation of the measured relative cross section w.r.t its true value. In this work, such deviations were investigated using Monte Carlo (MC) simulation within the ExpertRoot (ER) [3].
 
-ER is a framework for simulation of detector`s response, event reconstruction and real data analysis in low energy nuclear physics with radioactive beams. ExpertRoot is used for the EXPERT [4] project at SuperFRS (FAIR) and for the experiments at ACCULINNA-2 fragment-separator a [5].  ER inherits its approaches and methodology for developing software for entire life cycle of an experiment from FAIRRoot[6]. It adds the functionality needed for specific experiments and setups, It uses Root[7] for data storage and analysis and Geant4 [8] as a simulation engine.
+ER is a framework for simulation of detector`s response, event reconstruction and real data analysis in low energy nuclear physics with radioactive beams. ExpertRoot is used for the EXPERT [4] project at SuperFRS (FAIR) and for the experiments at ACCULINNA-2 fragment-separator[5].  ER inherits its approaches and methodology for developing software for entire life cycle of an experiment from FAIRRoot[6]. It adds the functionality needed for specific experiments and setups, It uses Root[7] for geometry modelling, data storage and analysis and Geant4 [8] as a simulation engine.
 
 The obtained results can be used for improving the theoretical interpretation of the experimental data. The developed method takes into account realistic descriptions of the energy deposit processes in the detector itself and signal processing in the readout and data acquisition systems. It is intended to be used for other similar experiments.
 
 \section{The experiment and its Monte Carlo simulation}
 
-The experimental setup (Fig. 1) consists of: a collimator for the ${}^{15}$N beam, ${}^{11}$B target and four identical detectors. Each detector is a combination of a gas ionization chamber and a silicon sensor, it allows identification of ions by the dE vs. E method. The aperture of the detector is defined by a vertical slit 2x4 mm in the aluminum cap. In order to measure angular dependence of the counting rate the detectors were moved with step of $1^0$  from $5^0$ to 4$5^0$ in Lab. Angle of $5^0$ in Lab corresponds to the angle about 1$1^{0}$in CM for ${}^{15}$N and about 16$9^0$ for ${}^{11}$B. Angle of 4$5^0$ in Lab corresponds to the angle about 8$6^{0}$in CM for ${}^{15}$N and about 11$0^0$ for ${}^{11}$B. Note that the angle of 4$5^0$ in the lab corresponds to $\theta$-angle of 9$0^0$  in Center of mass (CM) reference frame. Both ${}^{15}$N and ${}^{10,11}$B ions can be identified and counted by the detector. CM $\theta$-angle less than 9$0^0$  are accessible when ${}^{15}$N ions are detected while detection of ${}^{10,11}$B ions allow to explore the CM $\theta$-angle bigger than 9$0^0$.
+The experimental setup (Fig. 1) consists of a collimator for the ${}^{15}$N beam, 7-micron-thick ${}^{11}$B target, a Faraday cup for integrating the charge of incident ions pacced through the target and four identical detectors. Each detector is a combination of a gas ionization chamber and a silicon sensor, it allows identification of ions by the dE vs. E method. The aperture of the detector is defined by a vertical slit 2x4 mm$^2$ in the aluminum cap. The detectors are groupped by two and each pair is mounted on a movable platform. In order to measure angular dependence of the counting rate the detectors scanned the $\theta_{Lab}$ range  from $5 ^0$ to $45 ^0$ with step of $1^0$. Both ${}^{15}$N and ${}^{10,11}$B ions can be identified and counted by the detector. CM $\theta$-angle less than 9$0^0$  are accessible when ${}^{15}$N ions are detected while detection of ${}^{10,11}$B ions allow to explore the CM $\theta$-angle bigger than 9$0^0$. Note that the angle of $5 ^0$ in Lab corresponds to $\theta$-angle of about $11 ^0$ in Center of mass (CM) reference frame for $^{15}$N and about $169 ^0$ for $^{11}$B. Angle of $45 ^0$ in Lab corresponds to the angle about $86 ^{0}$in CM for $^{15}$N and about $110 ^0$ for ${}^{11}$B. 
+
+
+ 
 
 \begin{figure}[h]
 \center{\includegraphics[width=1\linewidth]{fig_1.eps}}
@@ -135,16 +138,35 @@ The following features of ER are used in this work:
 \item The interaction point inside the target is defined according to the user-defined distribution. The incident ion is transported till the interaction point taking into account ionization losses and multiple scattering.
 \item The velocity of the incident ion in the interaction point is used for defining the CM reference frame.
 \item A user-defined interaction is called. The incident ion is killed and the interaction products are put into the particle stack. For the case of the elastic scattering the user has to provide only the angular distribution in the CM reference frame in the form of the tabulated cumulative distribution function (CDF).
-\item The user can select the ranges of the CM $\theta$ and $\phi$-angles to be sampled in order to hit with the scattered ions only the slit of the detector and some zone around it thus saving the simulation time.  Corresponding re-normalization of the total number of the events is automatically performed.
+\item The user can select the ranges of the CM $\theta$ and $\phi$-angles to be sampled in order to hit with the scattered ions only the slit of the detector and some zone around it thus saving the simulation time. 
 \end{enumerate}
+
+The above mentioned user defined CDF can be composed from the theoretically calculated differential cross section as follows:
+
+\begin{eqnarray}
+ CDF(\theta_{CM}) = \frac{ \sum\limits_{\theta=5^0}^{\theta_{CM}} \frac{d\sigma}{d\Omega}(\theta) sin(\theta)} { \sum\limits_{\theta=5^0}^{175^0} \frac{d\sigma}{d\Omega}(\theta) sin(\theta)}
+\end{eqnarray}
+
+The $\theta_{CM}$ range from from $5 ^0$ to $175 ^0$ corresponds to the CDF range from 0 to 1.  If one wants to sample $N$ times the $\theta_{CM}$ values from $\theta_{CM, 1}$ to $\theta_{CM, 2}$, the CDF values from CDF($\theta_{CM, 1}$) to CDF($\theta_{CM, 2}$) should be unoformly sampled.  The correcpondiing total  number of interactions in thre target can be found as N$_0$ = N/(CDF($\theta_{CM, 1}$) - CDF($\theta_{CM, 1})$)
+
+ CHECK ABOVE FOPR CORRECTNESS!!!!
+
 
 \section{Results and discussion}
 
 The MC study included two stages. At the first stage the deterioration of the angular resolution due to different physical and geometrical factors  was investigated, at the second one we studied how the detection system distorts the derived differential cross section curves w.r.t. the input ones.
 
 \begin{figure}[h]
+\center{\includegraphics[width=1\linewidth]{fig_2.eps}}
+\caption{RMS}
+\label{ris:fig1}
+\end{figure}
+
+The angular resolution was defined as rms deviation of CM $\theta$-angle detected for Lab $\theta$-angle detectors position.
+
+\begin{figure}[h]
 \center{\includegraphics[width=1\linewidth]{fig_3.eps}}
-\caption{The angular resolution rms [deg] vs. Lab $\theta$-angle curves for different cases.}
+\caption{The angular resolution rms ($\theta_{CM}$)[deg] vs. Lab $\theta$-angle curves for different cases.}
 \label{ris:fig3}
 \end{figure}
 
@@ -154,7 +176,7 @@ The MC study included two stages. At the first stage the deterioration of the an
 \label{ris:fig4}
 \end{figure}
 
-The angular resolution was defined as rms deviation of CM $\theta-$angle detected for Lab $\theta$-angle detectors position.
+
 In the Fig. 2 the angular resolution vs. Lab $\theta$-angle curves are shown for different cases. We started from the ideal case with the beam along the Z-axis, without the target but with the realistic slit of the detector (Case 1) and introduced step by step the following realistic features: the 7-micron-thick ${}^{11}$B target (Case 2), energy spread of the ${}^{15}$N ion beam (42-43 MeV, uniform) (Case 3), spread of the $\theta$-angle of the ${}^{15}$N ion beam ($\sigma$ = 5 mrad) (Case 4),  spread of the $\phi$-angle of the ${}^{15}$N ion beam (0-2$\pi$, uniform) (Case 5), the X spread of the beam spot on the target (-0.5-0.5 cm, uniform) (Case 6), the Y spread of the beam spot on the target (-0.5-0.5 cm, uniform) (Case 7), the beam collimator (hole diameter is 1.5 cm)  (Case 8).
 
 
