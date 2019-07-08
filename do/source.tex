@@ -144,7 +144,7 @@ The following features of ER are used in this work:
 The above mentioned user defined CDF can be composed from the theoretically calculated differential cross section as follows:
 
 \begin{eqnarray}
- CDF(\theta_{CM}) = \frac{ \sum\limits_{\theta=5^0}^{\theta_{CM}} \frac{d\sigma}{d\Omega}(\theta) sin(\theta)} { \sum\limits_{\theta=5^0}^{175^0} \frac{d\sigma}{d\Omega}(\theta) sin(\theta)}
+ CDF(\theta_{CM}) = \frac{ \int\limits_{5^0}^{\theta_{CM}} \frac{d\sigma}{d\Omega}(\theta) sin(\theta)d\theta } { \int\limits_{5^0}^{175^0} \frac{d\sigma}{d\Omega}(\theta) sin(\theta)d\theta }
 \end{eqnarray}
 
 The $\theta_{CM}$ range from from $5 ^0$ to $175 ^0$ corresponds to the CDF range from 0 to 1.  If one wants to sample $N$ times the $\theta_{CM}$ values from $\theta_{CM, 1}$ to $\theta_{CM, 2}$, the CDF values from CDF($\theta_{CM, 1}$) to CDF($\theta_{CM, 2}$) should be unoformly sampled.  The correcpondiing total  number of interactions in the target can be found as N$_0$ = N/(CDF($\theta_{CM, 1}$) - CDF($\theta_{CM, 1})$)
