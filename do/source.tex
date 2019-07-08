@@ -99,7 +99,7 @@ The experiments have been performed using the charged particles detection system
 \end{eqnarray}
 where
 $\sigma$$_{tot}$ is a total cross section of the interaction
-and N$_{0}$ is a full projectiles number passed through the target and registered by the Faraday Cup (Fig.1).
+and N$_{0}$ is a full projectiles number passed through the target and registered by the Faraday Cup (Fig. \ref{ris:fig1}).
 
 Nevertheless, the beam emittance, finite thickness of the target and the size of the detector slit lead to certain systematic deviation of the measured relative cross section w.r.t its true value. In this work, such deviations were investigated using Monte Carlo (MC) simulation within the ExpertRoot (ER) [3].
 
@@ -109,7 +109,7 @@ The obtained results can be used for improving the theoretical interpretation of
 
 \section{The experiment and its Monte Carlo simulation}
 
-The experimental setup (Fig. 1) consists of a collimator for the ${}^{15}$N beam, 7-micron-thick ${}^{11}$B target, a Faraday cup for integrating the charge of incident ions pacced through the target and four identical detectors. Each detector is a combination of a gas ionization chamber and a silicon sensor, it allows identification of ions by the dE vs. E method. The aperture of the detector is defined by a vertical slit 2x4 mm$^2$ in the aluminum cap. The detectors are groupped by two and each pair is mounted on a movable platform. In order to measure angular dependence of the counting rate the detectors scanned the $\theta_{Lab}$ range  from $5 ^0$ to $45 ^0$ with step of $1^0$. Both ${}^{15}$N and ${}^{10,11}$B ions can be identified and counted by the detector. CM $\theta$-angle less than 9$0^0$  are accessible when ${}^{15}$N ions are detected while detection of ${}^{10,11}$B ions allow to explore the CM $\theta$-angle bigger than 9$0^0$. Note that the angle of $5 ^0$ in Lab corresponds to $\theta$-angle of about $11 ^0$ in Center of mass (CM) reference frame for $^{15}$N and about $169 ^0$ for $^{11}$B. Angle of $45 ^0$ in Lab corresponds to the angle about $86 ^{0}$in CM for $^{15}$N and about $110 ^0$ for ${}^{11}$B. 
+The experimental setup (Fig. \ref{ris:fig1}) consists of a collimator for the ${}^{15}$N beam, 7-micron-thick ${}^{11}$B target, a Faraday cup for integrating the charge of incident ions pacced through the target and four identical detectors. Each detector is a combination of a gas ionization chamber and a silicon sensor, it allows identification of ions by the dE vs. E method. The aperture of the detector is defined by a vertical slit 2x4 mm$^2$ in the aluminum cap. The detectors are groupped by two and each pair is mounted on a movable platform. In order to measure angular dependence of the counting rate the detectors scanned the $\theta_{Lab}$ range  from $5 ^0$ to $45 ^0$ with step of $1^0$. Both ${}^{15}$N and ${}^{10,11}$B ions can be identified and counted by the detector. CM $\theta$-angle less than 9$0^0$  are accessible when ${}^{15}$N ions are detected while detection of ${}^{10,11}$B ions allow to explore the CM $\theta$-angle bigger than 9$0^0$. Note that the angle of $5 ^0$ in Lab corresponds to $\theta$-angle of about $11 ^0$ in Center of mass (CM) reference frame for $^{15}$N and about $169 ^0$ for $^{11}$B. Angle of $45 ^0$ in Lab corresponds to the angle about $86 ^{0}$in CM for $^{15}$N and about $110 ^0$ for ${}^{11}$B. 
 
 
  
@@ -149,7 +149,7 @@ The above mentioned user defined CDF can be composed from the theoretically calc
 
 The $\theta_{CM}$ range from from $5 ^0$ to $175 ^0$ corresponds to the CDF range from 0 to 1.  If one wants to sample $N$ times the $\theta_{CM}$ values from $\theta_{CM, 1}$ to $\theta_{CM, 2}$, the CDF values from CDF($\theta_{CM, 1}$) to CDF($\theta_{CM, 2}$) should be unoformly sampled.  The correcpondiing total  number of interactions in thre target can be found as N$_0$ = N/(CDF($\theta_{CM, 1}$) - CDF($\theta_{CM, 1})$)
 
- CHECK ABOVE FOPR CORRECTNESS!!!!
+ CHECK ABOVE FOPR CORRECTNESS!!!! (I think, It is right!)
 
 
 \section{Results and discussion}
@@ -157,33 +157,34 @@ The $\theta_{CM}$ range from from $5 ^0$ to $175 ^0$ corresponds to the CDF rang
 The MC study included two stages. At the first stage the deterioration of the angular resolution due to different physical and geometrical factors  was investigated, at the second one we studied how the detection system distorts the derived differential cross section curves w.r.t. the input ones.
 
 \begin{figure}[h]
-\center{\includegraphics[width=1\linewidth]{fig_2.eps}}
-\caption{RMS}
-\label{ris:fig1}
+\center{\includegraphics[width=0.5\linewidth]{fig_2.eps}}
+\caption{Distribution of theta for ${}^{15}$N Case 6 (What is "Case:6" will be described below), detector position is $\theta_{Lab}$ = 1$8^0$ in which corresponds to about $\theta_{CM}$ = 4$3^0$.}
+\label{ris:fig2}
 \end{figure}
 
-The angular resolution was defined as rms deviation of CM $\theta$-angle detected for Lab $\theta$-angle detectors position.
+The angular resolution was defined as RMS deviation of CM $\theta$-angle detected for Lab $\theta$-angle detectors position.
 
 \begin{figure}[h]
 \center{\includegraphics[width=1\linewidth]{fig_3.eps}}
-\caption{The angular resolution rms ($\theta_{CM}$)[deg] vs. Lab $\theta$-angle curves for different cases.}
+\caption{The angular resolution RMS ($\theta_{CM}$)[deg] vs. Lab $\theta$-angle curves for different cases.}
 \label{ris:fig3}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \center{\includegraphics[width=1\linewidth]{fig_4.eps}}
-\caption{It is shown measured cross section as a function of the scattering angle in the CM.}
+\caption{It is shown measured cross section as a function of the scattering angle in the CM. Round markers correspond to ${}^{15}$N, and
+square ones to ${}^{11}$B.}
 \label{ris:fig4}
 \end{figure}
 
 
-In the Fig. 2 the angular resolution vs. Lab $\theta$-angle curves are shown for different cases. We started from the ideal case with the beam along the Z-axis, without the target but with the realistic slit of the detector (Case 1) and introduced step by step the following realistic features: the 7-micron-thick ${}^{11}$B target (Case 2), energy spread of the ${}^{15}$N ion beam (42-43 MeV, uniform) (Case 3), spread of the $\theta$-angle of the ${}^{15}$N ion beam ($\sigma$ = 5 mrad) (Case 4),  spread of the $\phi$-angle of the ${}^{15}$N ion beam (0-2$\pi$, uniform) (Case 5), the X spread of the beam spot on the target (-0.5-0.5 cm, uniform) (Case 6), the Y spread of the beam spot on the target (-0.5-0.5 cm, uniform) (Case 7), the beam collimator (hole diameter is 1.5 cm)  (Case 8).
+In the Fig. \ref{ris:fig3} the angular resolution vs. Lab $\theta$-angle curves are shown for different cases. We started from the ideal case with the beam along the Z-axis, without the target but with the realistic slit of the detector (Case 1) and introduced step by step the following realistic features: the 7-micron-thick ${}^{11}$B target (Case 2), energy spread of the ${}^{15}$N ion beam (42-43 MeV, uniform) (Case 3), spread of the $\theta$-angle of the ${}^{15}$N ion beam ($\sigma$ = 5 mrad) (Case 4),  spread of the $\phi$-angle of the ${}^{15}$N ion beam (0-2$\pi$, uniform) (Case 5), the X spread of the beam spot on the target (-0.5-0.5 cm, uniform) (Case 6), the Y spread of the beam spot on the target (-0.5-0.5 cm, uniform) (Case 7), the beam collimator (hole diameter is 1.5 cm)  (Case 8).
 
 
-In the Fig. 2 one can see that the angular resolution deteriorates by the factor almost 4 when all the discussed non idealities are taken into account. The statistical error of each point does not exceed $\pm$1$\%$. Wave-like behavior is statistically significant, but its cause is not clear. The main factors deteriorate angular resolutions are ${}^{11}$B target thick and X spread of the $\theta$-angle of the ${}^{15}$N ion beam.
+In the Fig. \ref{ris:fig2} one can see that the angular resolution deteriorates by the factor almost 4 when all the discussed non idealities are taken into account. The statistical error of each point does not exceed $\pm$1$\%$. Wave-like behavior is statistically significant, but its cause is not clear. The main factors deteriorate angular resolutions are ${}^{11}$B target thick and X spread of the $\theta$-angle of the ${}^{15}$N ion beam.
 
-The Fig. 3 shows how the detection system distorts the input differential cross section curves. Here the red line corresponds to the input cross-section and the blue and black points correspond to the restored one. There are three main effects. The first is that the measured dependence becomes less steep at the small angles than the original curve. The second is that the wave-like structure of the original curve becomes less prominent. This effects are relevant for the experiment and are due to the non-ideal angular resolution of the entire set up.
-The third is that the reconstructed cross section is slightly smaller than the input one. It is because some scattered ions go above and below the detector slit. This effect is not relevant for the experiment where the relative cross section is measured. The restored differential cross section for ${}^{15}$N is smaller than the original one by the factor 1,27, and for ${}^{11}$B by the factor 1,19. On the Fig. 3 the restored curves are normalized by this factors.
+The Fig. \ref{ris:fig4} shows how the detection system distorts the input differential cross section curves. Here the red line corresponds to the input cross-section and the blue and black points correspond to the restored one. There are three main effects. The first is that the measured dependence becomes less steep at the small angles than the original curve. The second is that the wave-like structure of the original curve becomes less prominent. This effects are relevant for the experiment and are due to the non-ideal angular resolution of the entire set up.
+The third is that the reconstructed cross section is slightly smaller than the input one. It is because some scattered ions go above and below the detector slit. This effect is not relevant for the experiment where the relative cross section is measured. The restored differential cross section for ${}^{15}$N is smaller than the original one by the factor 1,27, and for ${}^{11}$B by the factor 1,19. On the Fig. \ref{ris:fig4} the restored curves are normalized by this factors.
 
 \section{Conclusion}
 
