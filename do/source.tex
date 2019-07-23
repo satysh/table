@@ -85,7 +85,7 @@ cp,  % Conference Proceedings
               % Not printed for conference proceedings
 
 \begin{abstract}
-A series of experiments on the elastic scattering of ${}^{15}$N ions from ${}^{11}$B has been done at U-200P cyclotron at Heavy Ion Laboratory of the Warsaw University using the charged particles detection system ICARE. The measured relative differential cross-sections are used for obtaining the theoretical interpretation in terms of the Optical Model for pure elastic scattering and Distorted Wave Born Approximation for the cluster transfer mechanism. The accuracy of the interpretation depends on the systematic errors of the experiment. This work reports on a Monte Carlo (MC) study of such errors using the ExpertRoot simulation and analysis framework based on the FairRoot package. Influence of such factors as angular, spatial and energy spread of the beam, energy loss and multiple scattering in the target and the dimension of the detector slit on the angular resolution of the detector and the reconstructed relative differential cross-section are investigated. The MC model allowed to study the influence of the ion identification and detection efficiency and the energy resolution as well. However, in the given experiment these factors were not of any importance. As a result, it has been demonstrated that the main reasons for the deterioration of angular resolution are the beam spot size at the target and thickness of the target.The reconstructed differential cross-section is about 20$\%$ smaller than the input one. It is because some scattered ions go above and below the detector slit. Influence of the slit length is negligible, hence it can be increased for better detection efficiency. The developed software will be used for planning and analysing similar experiments in the future.
+A series of experiments on the elastic scattering of ${}^{15}$N ions from ${}^{11}$B has been done at U-200P cyclotron at Heavy Ion Laboratory of the Warsaw University using the charged particles detection system ICARE. The measured relative differential cross-sections are used for obtaining the theoretical interpretation in terms of the Optical Model for pure elastic scattering and Distorted Wave Born Approximation for the cluster transfer mechanism. The accuracy of the interpretation depends on the systematic errors of the experiment. This work reports on a Monte Carlo (MC) study of such errors using the ExpertRoot simulation and analysis framework based on the FairRoot package. Influence of such factors as angular, spatial and energy spread of the beam, energy loss and multiple scattering in the target and the dimension of the detector slit on the angular resolution of the detector and the reconstructed relative differential cross-section are investigated. The MC model allowed to study the influence of the ion identification and detection efficiency and the energy resolution as well. However, in the given experiment these factors were not of any importance. As a result, it has been demonstrated that the main reasons for the deterioration of angular resolution are the beam spot size at the target and thickness of the target. Influence of the slit length is negligible, hence it can be increased for better detection efficiency. The developed software will be used for planning and analysing similar experiments in the future.
 \end{abstract}
 
 \maketitle
@@ -109,10 +109,23 @@ The obtained results can be used for improving the theoretical interpretation of
 
 \section{The experiment and its Monte Carlo simulation}
 
-The experimental setup (Fig. \ref{ris:fig1}) consists of a collimator for the ${}^{15}$N beam, 7-micron-thick ${}^{11}$B target, a Faraday cup for integrating the charge of incident ions passed through the target and four identical detectors. Each detector is a combination of a gas ionization chamber and a silicon sensor, it allows identification of ions by the dE vs. E method. The aperture of the detector is defined by a vertical slit 2x4 mm$^2$ in the aluminum cap. The detectors are grouped by two and each pair is mounted on a movable platform. In order to measure angular dependence of the counting rate the detectors scanned the $\theta_{Lab}$ range  from $5 ^0$ to $45 ^0$ with step of $1^0$. Both ${}^{15}$N and ${}^{11}$B ions can be identified and counted by the detector. Center-of-mass (CM) $\theta$-angle less than 9$0^0$  are accessible when ${}^{15}$N ions are detected while detection of ${}^{11}$B ions allow to explore the CM $\theta$-angle larger than 9$0^0$. Note that the angle of $5 ^0$ in Lab corresponds to $\theta$-angle of ${11.81}^0$ in CM reference frame for $^{15}$N and ${170}^0$ for $^{11}$B. Angle of $45 ^0$ in Lab corresponds to the angle ${119.46}^{0}$in CM for $^{15}$N and ${90}^0$ for ${}^{11}$B.
-
-
-
+The experimental setup (Fig. \ref{ris:fig1}) consists of a collimator
+for the ${}^{15}$N beam, 7-micron-thick ${}^{11}$B target, a Faraday cup
+for integrating the charge of incident ions passed through the target
+and four identical detectors. Each detector is a combination of a gas
+ionization chamber and a silicon sensor, it allows identification of
+ions by the dE vs. E method. The aperture of the detector is defined by
+a vertical slit 2x4 mm$^2$ in the aluminum cap. The detectors are
+grouped by two and each pair is mounted on a movable platform. In order
+to measure angular dependence of the counting rate the detectors scanned
+the $\theta_{Lab}$ range  from $5 ^0$ to $45 ^0$ with step of $1^0$.
+Both ${}^{15}$N and ${}^{11}$B ions can be identified and counted by the
+detector. Center-of-mass (CM) $\theta$-angle less than $119.46^0$  are
+accessible when ${}^{15}$N ions are detected while detection of
+${}^{11}$B ions allow to explore the CM $\theta$-angle larger than
+$90^0$. Note that the angle of $5 ^0$ in Lab corresponds to
+$\theta$-angle of ${11.81}^0$ in CM reference frame for $^{15}$N and
+${170}^0$ for $^{11}$B.
 
 \begin{figure}[h]
 \center{\includegraphics[width=1\linewidth]{fig_1.eps}}
@@ -177,17 +190,28 @@ square ones to ${}^{11}$B.}
 \end{figure}
 
 
-In the Fig. \ref{ris:fig3} the angular resolution vs. Lab $\theta$-angle curves are shown for different cases. We started from the ideal case with the beam along the Z-axis, without the target but with the realistic slit of the detector (Case 1) and introduced step by step the following realistic features: the 7-micron-thick ${}^{11}$B target (Case 2), energy spread of the ${}^{15}$N ion beam, [42-43] MeV, uniform (Case 3), spread of the $\theta$-angle of the ${}^{15}$N ion beam, $\sigma$ = 5 mrad (Case 4),  spread of the $\phi$-angle of the ${}^{15}$N ion beam, [0-2$\pi$], uniform (Case 5), the X spread of the beam spot on the target [-0.5-0.5] cm, uniform (Case 6), the Y spread of the beam spot on the target [-0.5-0.5] cm, uniform (Case 7), the beam collimator, hole diameter is 1.5 cm  (Case 8).
+In the Fig. \ref{ris:fig3} the angular resolution vs. Lab $\theta$-angle curves are shown for different cases. We started from the ideal case with the beam along the Z-axis, without the target but with the realistic slit of the detector (Case 1) and introduced step by step the following realistic features: the 7-micron-thick ${}^{11}$B target (Case 2), energy spread of the ${}^{15}$N ion beam, [42.5-43.5] MeV, uniform (Case 3), spread of the $\theta$-angle of the ${}^{15}$N ion beam, $\sigma$ = 5 mrad (Case 4),  spread of the $\phi$-angle of the ${}^{15}$N ion beam, [0-2$\pi$], uniform (Case 5), the X spread of the beam spot on the target [-0.5-0.5] cm, uniform (Case 6), the Y spread of the beam spot on the target [-0.5-0.5] cm, uniform (Case 7), the beam collimator, hole diameter is 1.5 cm  (Case 8).
 
 
 In the Fig. \ref{ris:fig2} one can see that the angular resolution deteriorates by the factor almost 6 when all the discussed non idealities are taken into account. The statistical error of each point does not exceed $\pm$1$\%$. Wave-like behavior is statistically significant, but its cause is not clear and requires further investigation. The main factors spoiling the angular resolutions are the thickness of the ${}^{11}$B target and horizontal spread of the ${}^{15}$N ion beam at the target.
 
-The Fig. \ref{ris:fig4} shows how the detection system distorts the input differential cross-section curves. Here the red line corresponds to the input cross-section and the blue and black points correspond to one reconstructed from the MC data. There are three main effects. The first is that the measured dependence becomes less steep at the small angles than the original curve. The second one is small decrease of the reconstructed cross-section at large angles. This effects are relevant for the experiment and are due to the non-ideal angular resolution of the entire set up.
-The third effect is that the reconstructed cross-section is generally smaller than the input one. It is because some scattered ions go above and below the detector slit. This effect is not relevant for the experiment where the relative cross-section is measured. The reconstructed differential cross-section for detected ${}^{15}$N ions is smaller than the original one by the factor 1.27, and for detected ${}^{11}$B ions --- by the factor 1.17.  The reconstructed curves shown in  fig. \ref{ris:fig4} are normalized by this factors.
+The Fig. \ref{ris:fig4} shows how the detection system distorts the
+input differential cross-section curves. Here the red line corresponds
+to the input cross-section and the blue and black points correspond to
+one reconstructed from the MC data. There are three main effects. The
+first is that the measured dependence becomes steeper at the small
+angles than the original curve. The second one is small decrease of the
+reconstructed cross-section at large angles. This effects are due to the
+non-ideal angular resolution of the entire set up. The third effect is
+that the reconstructed cross-section for CM $\theta$-angle larger than
+$90^0$ is smaller than the input one if measured via detection of the
+${}^{15}$N ions.
+This fact is due to decrease of energy of ions scattered at large angle
+resulting in reduced detection efficiency.
 
 \section{Conclusion}
 
-MC simulations of the experiment on the elastic scattering of ${}^{15}$N  from ${}^{11}$B have been done. Systematic influence of some physical and geometrical features on the results has been studied. It has been demonstrated that the main reasons for the deterioration of angular resolution are the beam spot size at the target and thickness of the target.The reconstructed differential cross-section is about 20$\%$ smaller than the input one. It is because some scattered ions go above and below the detector slit. Influence of the detector slit height is negligible; hence it can be increased for better detection efficiency. The developed software will be used for planning and analysis of similar experiments in the future.
+MC simulations of the experiment on the elastic scattering of ${}^{15}$N  from ${}^{11}$B have been done. Systematic influence of some physical and geometrical features on the results has been studied. It has been demonstrated that the main reasons for the deterioration of angular resolution are the beam spot size at the target and thickness of the target. Influence of the detector slit height is negligible; hence it can be increased for better detection efficiency. The developed software will be used for planning and analysis of similar experiments in the future.
 
 \section{References}
 
