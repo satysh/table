@@ -85,7 +85,7 @@ cp,  % Conference Proceedings
               % Not printed for conference proceedings
 
 \begin{abstract}
-A series of experiments on the elastic scattering of ${}^{15}$N ions from ${}^{11}$B has been done at U-200P cyclotron at Heavy Ion Laboratory of the Warsaw University using the charged particles detection system ICARE. The measured relative differential cross-sections are used for obtaining the theoretical interpretation in terms of the Optical Model for pure elastic scattering and Distorted Wave Born Approximation for the cluster transfer mechanism. The accuracy of the interpretation depends on the systematic errors of the experiment. This work reports on a Monte Carlo (MC) study of such errors using the ExpertRoot simulation and analysis framework based on the FairRoot package. Influence of such factors as angular, spatial and energy spread of the beam, energy loss and multiple scattering in the target and the dimension of the detector slit on the angular resolution of the detector and the reconstructed relative differential cross-section are investigated. The MC model allowed to study the influence of the ion identification and detection efficiency and the energy resolution as well. However, in the given experiment these factors were not of any importance. As a result, it has been demonstrated that the main reasons for the deterioration of angular resolution are the beam spot size at the target and thickness of the target. Influence of the slit length is negligible, hence it can be increased for better detection efficiency. The developed software will be used for planning and analysing similar experiments in the future.
+A series of experiments on the elastic scattering of ${}^{15}$N ions from ${}^{11}$B has been done at U-200P cyclotron at Heavy Ion Laboratory of the Warsaw University using the charged particles detection system ICARE. The measured relative differential cross-sections are used for obtaining the theoretical interpretation in terms of the Optical Model for pure elastic scattering and Distorted Wave Born Approximation for the cluster transfer mechanism. The accuracy of the interpretation depends on the systematic errors of the experiment. This work reports on a Monte Carlo (MC) study of such errors using the ExpertRoot simulation and analysis framework based on the FairRoot package. Influence of such factors as angular, spatial and energy spread of the beam, energy loss and multiple scattering in the target and the dimension of the detector slit on the angular resolution of the detector and the reconstructed relative differential cross-section are investigated. The MC model allowed to study the influence of the ion identification and detection efficiency and the energy resolution as well. However, in the given experiment these factors were not of any importance. As a result, it has been demonstrated that the main reasons for the deterioration of angular resolution are the beam spot size at the target and thickness of the target. Influence of the slit length is negligible, hence it can be increased for better detection efficiency. The reconstructed cross-section reproduces the input one quite well except for about $10\%$ overestimation at small angles and $30\%$ underestimation at large angles. The developed software will be used for planning and analysing similar experiments in the future.
 \end{abstract}
 
 \maketitle
@@ -99,11 +99,11 @@ The experiments have been performed using the charged particles detection system
 \end{eqnarray}
 where
 $\sigma$$_{tot}$ is a total cross-section of the interaction
-and N$_{0}$ is a full projectiles number passed through the target and registered by the Faraday Cup (Fig. \ref{ris:fig1}).
+and N$_{0}$ is a full number of projectiles passed through the target and registered by the Faraday Cup (Fig. \ref{ris:fig1}).
 
 Nevertheless, the beam emittance, finite thickness of the target and the size of the detector slit lead to certain systematic deviation of the measured relative cross-section with respect to its true value. In this work, such deviations were investigated using Monte Carlo (MC) simulation within the ExpertRoot (ER) [3].
 
-ER is a framework for simulation of detector`s response, event reconstruction and real data analysis in low energy nuclear physics with radioactive beams. ExpertRoot is used for the EXPERT [4] project at SuperFRS (FAIR) and for the experiments at ACCULINNA-2 fragment-separator [5].  ER inherits its approaches and methodology for developing software for entire life cycle of an experiment from FAIRRoot [6]. It adds the functionality needed for specific experiments and setups, it uses Root [7] for geometry modelling, data storage and analysis and Geant4 [8] as a simulation engine.
+ER is a framework for simulation of detector`s response, event reconstruction and real data analysis in low energy nuclear physics with radioactive beams. ExpertRoot is used for the EXPERT [4] project at SuperFRS (FAIR) and for the experiments at ACCULINNA-2 fragment-separator [5].  ER inherits its approaches and methodology for developing software for entire life cycle of an experiment from FairRoot [6]. It adds the functionality needed for specific experiments and setups, it uses Root [7] for geometry modelling, data storage and analysis and Geant4 [8] as a simulation engine.
 
 The obtained results can be used for improving the theoretical interpretation of the experimental data. The developed method takes into account realistic descriptions of the energy deposit processes in the detector itself and signal processing in the readout and data acquisition systems. It is intended to be used for other similar experiments.
 
@@ -148,7 +148,7 @@ ${170}^0$ for $^{11}$B.
 
 The following features of ER are used in this work:
 \begin{enumerate}
-\item The interaction point inside the target is defined according to the user-defined distribution. The incident ion is transported till the interaction point taking into account ionization losses and multiple scattering. The velocity vector of the incident ion just before interaction is recorded.
+\item The interaction point inside the target is sampled according to the user-defined distribution. The incident ion is transported till the interaction point taking into account ionization losses and multiple scattering. The velocity vector of the incident ion just before interaction is recorded.
 \item For each event the recorded velocity of the incident ion in the interaction point is used for defining the CM reference frame.
 \item A user-defined interaction is called. The incident ion is killed and the interaction products are put into the particle stack. For the case of the elastic scattering the user has to provide only the angular distribution in the CM reference frame in the form of the tabulated cumulative distribution function (CDF).
 \item The user can select the ranges of the CM $\theta$ and $\phi$-angles to be sampled in order to hit with the scattered ions only the slit of the detector and some zone around it thus saving the simulation time.
@@ -199,10 +199,10 @@ The Fig. \ref{ris:fig4} shows how the detection system distorts the
 input differential cross-section curves. Here the red line corresponds
 to the input cross-section and the blue and black points correspond to
 one reconstructed from the MC data. There are three main effects. The
-first is that the measured dependence becomes steeper at the small
-angles than the original curve. The second one is small decrease of the
+first is that the measured dependence becomes at the small
+angles steeper than the original curve. The overestimation of about 10% takes place at $\theta_{CM} = 12^0$ The second one is about 30% decrease of the
 reconstructed cross-section at large angles. This effects are due to the
-non-ideal angular resolution of the entire set up. The third effect is
+non-ideal angular resolution of the entire set up and deflection of ions from the detector slit due to multiple scattering. The third effect is
 that the reconstructed cross-section for CM $\theta$-angle larger than
 $90^0$ is smaller than the input one if measured via detection of the
 ${}^{15}$N ions.
@@ -211,7 +211,7 @@ resulting in reduced detection efficiency.
 
 \section{Conclusion}
 
-MC simulations of the experiment on the elastic scattering of ${}^{15}$N  from ${}^{11}$B have been done. Systematic influence of some physical and geometrical features on the results has been studied. It has been demonstrated that the main reasons for the deterioration of angular resolution are the beam spot size at the target and thickness of the target. Influence of the detector slit height is negligible, hence it can be increased for better detection efficiency. The developed software will be used for planning and analysis of similar experiments in the future.
+MC simulations of the experiment on the elastic scattering of ${}^{15}$N  from ${}^{11}$B have been done. Systematic influence of some physical and geometrical features on the results has been studied. It has been demonstrated that the main reasons for the deterioration of angular resolution are the beam spot size at the target and thickness of the target. Influence of the detector slit height is negligible, hence it can be increased for better detection efficiency. The reconstructed cross-section reproduces the input one quite well except for about $10\%$ overestimation at small angles and $30\%$ underestimation at large angles. The developed software will be used for planning and analysis of similar experiments in the future.
 
 \section{References}
 
